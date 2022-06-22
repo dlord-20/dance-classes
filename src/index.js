@@ -26,9 +26,7 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<Navigation/>} > 
-          <Route path=':cover' element={<Cover/>} >
-            <Route path='studio' element={<Studio />} />
-          </Route>  
+          <Route path=':cover' element={<Cover/>} />
           <Route exact path='/' element={<Home />} />
         </ Route>
       </Routes>

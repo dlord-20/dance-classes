@@ -1,13 +1,19 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, Link } from 'react-router-dom';
+import Navigation from '../navigation/navigation';
 
 export default function Home() {
     return (
-      <div className="Home">
-        <div className='Cover-Img'>
-            <img src='#' alt='test' />
+    <div>
+        <div className="Home">
+            <h1>KAUST's Kids Dance Classes</h1>
+            <p>Learn to love dance with an fun, experienced teacher. The kids will all forms of dance and showcase their talent at the end of each semester.</p>
+            <Link to=''>Sign up</Link>
         </div>
-        <h1>Test</h1>
-      </div>
+        <div>
+            <h2>Can you believe this?</h2>
+            <p>I totally figured out how to use React with React Router</p>
+        </div>
+    </div>
     );
   }

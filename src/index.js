@@ -20,16 +20,17 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <Routes>
-      <Route path='/' element={<Navigation />} />
-    </Routes>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/redirect' element={<App replace to='/' />} />
-      <Route path='/' element={<Navigation />} />
-    </Routes>
-  </Router>
+  <div  className='Container'>
+    <Router>
+      <Routes>
+      <Route path='/' element={<Navigation />} >        
+        <Route path='/' element={<Home />} />
+      </ Route>
+        <Route path='/redirect' element={<Home replace to='/studio'/>} />
+        <Route path='/' element={<Navigation />} />
+      </Routes>
+    </Router>
+  </div>
 );
 
 

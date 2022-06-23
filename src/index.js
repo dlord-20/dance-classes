@@ -9,6 +9,7 @@ import Navigation from './components/navigation/navigation';
 import SignUp from './components/sign-up/sign-up';
 import Contact from './components/contact/contact';
 import About from './components/about/about';
+import Classes from './components/studio/classes/classes';
 import { 
   BrowserRouter as Router,
   Routes,
@@ -28,9 +29,10 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<Navigation/>} > 
-          <Route path=':cover' element={<Cover/>} />
           <Route exact path='/' element={<Home />} />
-          <Route path='studio' element={<Studio />} />
+          <Route path='studio' element={<Studio />} >
+            <Route path=':classes' element={<Classes />} />
+          </Route>
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
           <Route path='sign-up' element={<SignUp />} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
 import Cover from '../cover/cover';
+import CoverImg from './City.jpg';
 
 export default function SignUp() {
 
@@ -13,7 +14,7 @@ export default function SignUp() {
       <div>
         <Cover 
           pageName='Sign-up'
-          imgLink='#'
+          imgLink={CoverImg}
           imgAltText='what is this?'
         />
         <div className="sign-up">

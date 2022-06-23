@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
-import Navigation from '../navigation/navigation';
 import Cover from '../cover/cover';
 import CoverImg from './96520.jpg';
 

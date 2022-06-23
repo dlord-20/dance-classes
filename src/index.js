@@ -30,9 +30,8 @@ root.render(
       <Routes>
         <Route path='/' element={<Navigation/>} > 
           <Route exact path='/' element={<Home />} />
-          <Route path='studio' element={<Studio />} >
-            <Route path=':classes' element={<Classes />} />
-          </Route>
+          <Route path='studio' element={<Studio />} />
+          <Route exact path='studio/:classes' element={<Classes />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
           <Route path='sign-up' element={<SignUp />} />
@@ -41,6 +40,5 @@ root.render(
     </Router>
   </div>
 );
-
 
 reportWebVitals();

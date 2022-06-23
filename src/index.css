@@ -116,3 +116,11 @@ code {
 }
 
 /* Card End */
+
+/* Classes Start */
+
+.classes span {
+  text-transform: uppercase;
+}
+
+/* Classes End */

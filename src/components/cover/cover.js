@@ -17,7 +17,6 @@ export default function Cover(props) {
             <p>Learn to love dance with an fun, experienced teacher. The kids will all forms of dance and showcase their talent at the end of each semester.</p>
             <Link to=''>Sign up</Link>
 
-            <Outlet />
         </div>
     
     return (

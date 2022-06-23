@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './components/home/home';
 import Studio from './components/studio/studio';
 import Cover from './components/cover/cover';
 import Navigation from './components/navigation/navigation';
+import SignUp from './components/sign-up/sign-up';
+import Contact from './components/contact/contact';
+import About from './components/about/about';
 import { 
   BrowserRouter as Router,
   Routes,
@@ -28,6 +30,10 @@ root.render(
         <Route path='/' element={<Navigation/>} > 
           <Route path=':cover' element={<Cover/>} />
           <Route exact path='/' element={<Home />} />
+          <Route path='studio' element={<Studio />} />
+          <Route path='about' element={<About />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='sign-up' element={<SignUp />} />
         </ Route>
       </Routes>
     </Router>

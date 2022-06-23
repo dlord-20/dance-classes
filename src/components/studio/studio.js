@@ -10,7 +10,7 @@ export default function Studio() {
             imgLink='#'
             imgAltText='what is this?'
           />
-          <div className="signUp">
+          <div className="studio">
             
           </div>
         </div>

@@ -4,7 +4,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 export default function Navigation() {
     return (
         <div>
-            <div className="Navigation">
+            <div className="navigation">
                 <p>Dance with Nicole</p>
                 <nav>
                     <ul>

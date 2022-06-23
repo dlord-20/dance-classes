@@ -24,7 +24,7 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div  className='Container'>
+  <div  className='container'>
     <Router>
       <Routes>
         <Route path='/' element={<Navigation/>} > 

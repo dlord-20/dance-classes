@@ -10,7 +10,7 @@ export default function SignUp() {
           imgLink='#'
           imgAltText='what is this?'
         />
-        <div className="signUp">
+        <div className="sign-up">
           
         </div>
       </div>

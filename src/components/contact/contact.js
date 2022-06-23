@@ -10,7 +10,7 @@ export default function Contact() {
             imgLink='#'
             imgAltText='what is this?'
           />
-          <div className="signUp">
+          <div className="contact">
             
           </div>
         </div>

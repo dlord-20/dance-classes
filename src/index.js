@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+//import components
 import Home from './components/home/home';
 import Studio from './components/studio/studio';
-import Cover from './components/cover/cover';
 import Navigation from './components/navigation/navigation';
 import SignUp from './components/sign-up/sign-up';
 import Contact from './components/contact/contact';
 import About from './components/about/about';
 import Classes from './components/studio/classes/classes';
+import Footer from './components/footer/footer';
+
+//import router
 import { 
   BrowserRouter as Router,
   Routes,
@@ -27,16 +31,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div  className='container'>
     <Router>
+      <Navigation />
       <Routes>
-        <Route path='/' element={<Navigation/>} > 
-          <Route exact path='/' element={<Home />} />
-          <Route path='studio' element={<Studio />} />
-          <Route exact path='studio/:classes' element={<Classes />} />
-          <Route path='about' element={<About />} />
-          <Route path='contact' element={<Contact />} />
-          <Route path='sign-up' element={<SignUp />} />
-        </ Route>
+        <Route path='/' element={<Home />} />
+        <Route path='studio' element={<Studio />} />
+        <Route exact path='studio/:classes' element={<Classes />} />
+        <Route path='about' element={<About />} />
+        <Route path='contact' element={<Contact />} />
+        <Route path='sign-up' element={<SignUp />} />
+        <Route element={<Footer />} />
       </Routes>
+      {/* Need to see if this is industry standard and style it */}
+      <Footer />
     </Router>
   </div>
 );

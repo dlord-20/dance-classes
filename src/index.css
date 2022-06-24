@@ -126,3 +126,33 @@ code {
 }
 
 /* Classes End */
+
+/* Footer Start */
+
+.footer {
+  margin-top: 100px;
+  height: 150px;
+  padding-top: 50px;
+  border-top: 1px black solid;
+  width: 100vw;
+  margin-inline-start: 50%;
+  transform: translateX(-50%);
+  
+  text-align: center;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.footer .navigation {
+  align-items: center;
+  text-align: left;
+}
+
+.footer .navigation ul {
+  flex-direction: column;
+}
+
+
+/* Footer End */

@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, Outlet, Link, useParams } from 'react-router-dom';
 import Cover from '../../cover/cover';
 import Card from '../../../containers/card/card';
+import Testimonials from '../../testimonials/testimonials';
 import CoverImg from '../hbo_westworld_tv_series_season_2_2018-wallpaper-3000x2000.jpg'
 
 export default function Classes() {
@@ -38,6 +39,7 @@ export default function Classes() {
             class={array[2]}
           />
         </div>
+        <Testimonials currentClass={classes}/>
       </div>
     );
   }

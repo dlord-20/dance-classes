@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
 import Cover from '../cover/cover';
+import Testimonials from '../testimonials/testimonials';
 import CoverImg from './96520.jpg';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
             <h2>Can you believe this?</h2>
             <p>I totally figured out how to use React with React Router</p>
         </div>
+        <Testimonials className=''/>
     </div>
     );
   }

@@ -1,15 +1,17 @@
 import React from 'react';
-import { NavLink, Outlet, Link } from 'react-router-dom';
+import { NavLink, Outlet, Link, useParams } from 'react-router-dom';
 
 //Components
 import Cover from '../cover/cover';
 import Card from '../../containers/card/card'
+import Testimonials from '../testimonials/testimonials';
 
 //Images
 import CoverImg from './hbo_westworld_tv_series_season_2_2018-wallpaper-3000x2000.jpg';
 
 
 export default function Studio() {
+    const {studio} = useParams();
     return (
         <div>
           <div>
@@ -37,6 +39,7 @@ export default function Studio() {
             />
 
             </div>
+            <Testimonials  currentClass={studio}/>
         </div>
       );
   }

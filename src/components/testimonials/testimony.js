@@ -1,17 +1,18 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import TestimonialObject from './testimonial-object';
 
-export default function Testimony() {
+export default function Testimony(props) {
+    const review = props.testimony;
+
     return (
         <div>
             <div className="testimony">
-                <p>Dance with Nicole</p>
-                <nav>
-                    
-                </nav>
+                <p>{review.testimony}</p>
+                <p>- {review.name} ({review.wasStudent ? 'Student' : 'Parent'})</p>
+                <p>Class: {review.danceClassName}</p>
+                <p>Date: {review.date}</p>
+                <p>Rating: {review.rating} Stars</p>
             </div>
-            <Outlet />
         </div>
     );
   }

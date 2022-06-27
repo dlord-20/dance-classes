@@ -12,6 +12,7 @@ import Testimony from './testimony';
 
 export default function Testimonials(props) {
 
+    //Sets the array used through the function according to the page
     const changeDisplayArray = () => {
         var filteredTestimonies = [];
         if(props.currentClass === 'k1' || props.currentClass === 'k2' || props.currentClass === 'k3' || props.currentClass === 'g1g3') {
@@ -26,7 +27,7 @@ export default function Testimonials(props) {
 
     const [display, setDisplay] = useState(changeDisplayArray());
 
-
+    //Get the array used for the page
     useEffect(() => {
         setDisplay(changeDisplayArray());
         return() => {
@@ -34,13 +35,9 @@ export default function Testimonials(props) {
         }
     }, [props.currentClass])
 
-
-
-
-
     const [displayTestimony, setDisplayTestimony] = useState(display[0]);
 
-    //Need to make this a plus or minus depending on the input
+    //Adds or subtracts depending on which arrow clicked
     const changeDisplayIndex = (num) => {
         //Don't think we need this commented out code anymore
         // if(display.length === 0) {
@@ -71,18 +68,27 @@ export default function Testimonials(props) {
 
     const [displayIndex, setDisplayIndex] = useState(0);
 
-    //set interval for changeDisplay
+    //Cycle testimonies
+    useEffect(() => {
+        if(display.length > 1) {
+            const interval = setInterval(() => {
+            changeDisplayIndex(1);
+            }, 3000);
+        return () => clearInterval(interval);
+        }
+    })
+
+    //Reset index back to zero for new page
     useEffect(() => {
         changeDisplayIndex(0);
-        return () => {
-            // changeDisplay();
-        }
     }, [display]);
 
+    //Display correct array according to array
     const changeDisplay = () => {
         return setDisplayTestimony(display[displayIndex]);
     }
 
+    //Is called on a page change and changes testimonies to the corresponding array
     useEffect(() => {
         changeDisplay();
         return () => {

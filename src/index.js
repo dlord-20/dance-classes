@@ -39,7 +39,6 @@ root.render(
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
         <Route path='sign-up' element={<SignUp />} />
-        <Route element={<Footer />} />
       </Routes>
       {/* Need to see if this is industry standard and style it */}
       <Footer />

@@ -59,7 +59,7 @@ export default function Slideshow(props) {
     return (
         <div className='slideshow'>
             <h3>Slideshow</h3>
-            <div>
+            <div className='slides'>
                 {/* Array goes here */}
                 {displaySlides}
 

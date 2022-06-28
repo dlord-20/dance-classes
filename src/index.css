@@ -156,3 +156,10 @@ html {
 
 
 /* Footer End */
+
+/* Slides */
+
+.slides {
+  display: flex;
+  gap: 1rem;
+}

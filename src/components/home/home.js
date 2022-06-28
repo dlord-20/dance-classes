@@ -23,7 +23,7 @@ export default function Home() {
             <p>I totally figured out how to use React with React Router</p>
         </div>
         <Testimonials className=''/>
-        <Slideshow numOfPictures={3}/>
+        <Slideshow numOfPictures={4}/>
     </div>
     );
   }

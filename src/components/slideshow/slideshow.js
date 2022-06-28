@@ -8,12 +8,25 @@ export default function Slideshow(props) {
     const [index, setIndex] = useState(0);
     const [displaySlides, setDisplaySlides] = useState([]);
 
+    //Cycles in a carousel manner through entire slideshow array from left to right (got it be an easier way but it works)
     const selectSlideshowDisplay = (num) => {
-        
         var tempArray = [];
-
-        for (let i = index; i < index + num; i++) {
-            tempArray.push(slideshowArray[i])
+        if(index > slideshowArray.length - num) {
+            tempArray.push(slideshowArray[index]);
+            if(slideshowArray.length - 1 > index) {
+                for(let i = index + 1; i < slideshowArray.length; i++) {
+                    tempArray.push(slideshowArray[i]);
+                }
+            }
+            const tempNum = tempArray.length;
+            for(let i = 0; i < num - tempNum; i++) {
+                tempArray.push(slideshowArray[i]);
+            }
+            
+        } else {
+            for (let i = index; i < index + num; i++) {
+                tempArray.push(slideshowArray[i])
+            }
         }
 
         return tempArray.map(slide => <Slide image={slide} />);
@@ -21,38 +34,28 @@ export default function Slideshow(props) {
 
     //Index should be 'num' behind length of total slideshowArray
     const changeIndex = () => {
-        console.log('index = ' + index);
-        console.log('slideshowArray.length = ' + slideshowArray.length);
-        console.log('props.numOfPictures + 1 = ' + (props.numOfPictures + 1));
-        if(index === slideshowArray.length - (props.numOfPictures)) {
+        if(index === slideshowArray.length - 1) {
             setIndex(0);
         } else {
             setIndex(index + 1);
         }
     }
 
+    //changes slides whenever the index changes
     useEffect(() => {
-        console.log('index = ' + index);
-        console.log('numOfPictures = ' + props.numOfPictures);
         setDisplaySlides(selectSlideshowDisplay(props.numOfPictures));
         return() => {
 
         }
     }, [index])
 
+    //Timer to change in index of the array (allows the 'movement' of the images)
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log(index);
-            console.log(displaySlides);
             changeIndex();
-        }, 8000);
+        }, 4500);
         return () => clearInterval(interval);
     })
-
-    // const changeDisplaySlides = () => {
-    //     setDisplaySlides(selectSlideshowDisplay(3, index))
-    // }
-
 
     return (
         <div className='slideshow'>

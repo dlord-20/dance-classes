@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import slideshowArray from './slideshowObject';
 import Slide from './slide';
 
@@ -29,7 +28,7 @@ export default function Slideshow(props) {
             }
         }
 
-        return tempArray.map(slide => <Slide image={slide} />);
+        return tempArray.map(slide => <Slide image={slide} key={slide.altImg}/>);
     }
 
     //Index should be 'num' behind length of total slideshowArray

@@ -19,7 +19,6 @@ export default function Testimonials(props) {
             filteredTestimonies = danceClasses.filter(item => item.danceClassName === props.currentClass)
         } else {
             filteredTestimonies = danceClasses.map(item => item);
-            console.log('here');
         }
     
         return filteredTestimonies.map(item => <Testimony testimony={item}/>);

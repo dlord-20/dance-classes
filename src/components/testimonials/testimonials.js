@@ -98,6 +98,7 @@ export default function Testimonials(props) {
 
     return (
         <div>
+            <h3>Hear what people are saying!</h3>
             <div className="testimonies">
                 <p onClick={minusToIndex}>&#x2190;</p>
                 <div>

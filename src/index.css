@@ -163,3 +163,24 @@ html {
   display: flex;
   gap: 1rem;
 }
+
+/* End Slides */
+
+/* Start Testimonials */
+
+.testimonies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.testimonies div {
+  height: 250px;
+  width: 400px;
+  text-align: center;
+}
+
+.testimonies p {
+  cursor: pointer;
+}

@@ -173,12 +173,17 @@ html {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  max-height: 300px;
 }
 
 .testimonies div {
-  height: 250px;
+  height: 200px;
   width: 400px;
   text-align: center;
+  background-color: whitesmoke;
+  color: darkslategrey;
+  border: 1px black solid;
+  text-decoration-color: bisque;
 }
 
 .testimonies p {

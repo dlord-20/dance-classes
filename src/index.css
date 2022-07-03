@@ -191,6 +191,6 @@ html {
   text-decoration-color: bisque;
 }
 
-.testimonies p {
+.testimonies .arrow {
   cursor: pointer;
 }
